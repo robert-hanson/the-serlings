@@ -45,13 +45,17 @@
     .blippo{
         font-family: 'Chalkduster'
     }
+
+    .timer {
+        font-family: '"Arial Black", Gadget, sans-serif'
+    }
 </style>
 <body>
     <div class='bg'>
         <!-- Display the countdown timer in an element -->
         <div class='pt-4'>
             
-            <h2 id="timer" class='creep_green pl-4'></h2>
+            <h2 id="timer" class='creep_green pl-4 timer'></h2>
             <div class='text-right pr-4' id='welcome' style='display: none'>
                 <h3 class='text-white blippo' >"What the Light Brings"</h3>
                 <h2 class='text-white blippo' >OUT NOW!</h2>
@@ -76,9 +80,11 @@
 
     <script>
         var starttime;
+        
+        debugger;
         // Set the date we're counting down to
         // var countDownDate = new Date("Jul 2, 2019 22:43:00").getTime();
-        var countDownDate = new Date("Jul 3, 2019 14:00:00");
+        var countDownDate = new Date('<%= endDate %>');
         countDownDate = countDownDate.getTime() -countDownDate.getTimezoneOffset();
 
         // Update the count down every 1 second
