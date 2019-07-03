@@ -12,6 +12,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/b8cce31243.js"></script>
 </head>
 <style>
     body, html {
@@ -40,11 +41,33 @@
     .creep_green{
         color: #1aff8c
     }
+
+    .blippo{
+        font-family: 'Chalkduster'
+    }
 </style>
 <body>
     <div class='bg'>
         <!-- Display the countdown timer in an element -->
-        <h2 id="demo" class='creep_green pl-4 pt-4'></h2>
+        <div class='pt-4'>
+            
+            <h2 id="timer" class='creep_green pl-4'></h2>
+            <div class='text-right pr-4' id='welcome' style='display: none'>
+                <h3 class='text-white blippo' >"What the Light Brings"</h3>
+                <h2 class='text-white blippo' >OUT NOW!</h2>
+                <div class='pb-5'>
+                    <a href='https://open.spotify.com/artist/5lQaNyh0QEPGxEMpixEnnk?si=Ums9pUNrSkCwwC17FP2iqQ'>
+                        <i class="fab fa-spotify fa-5x"></i>
+                    </a>
+                    <a href='https://music.apple.com/us/artist/the-serlings/1437004735'>
+                        <i class="fab fa-itunes fa-5x"></i>
+                    </a>
+                    <a href='https://www.youtube.com/channel/UCbuDz2kSMCLDup-UH5zlzeQ'>
+                        <i class="fab fa-youtube fa-5x"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 
 
@@ -52,8 +75,9 @@
 
 
     <script>
-    
+        var starttime;
         // Set the date we're counting down to
+        // var countDownDate = new Date("Jul 2, 2019 22:43:00").getTime();
         var countDownDate = new Date("Jul 3, 2019 12:00:00").getTime();
 
         // Update the count down every 1 second
@@ -64,7 +88,6 @@
 
         // Find the distance between now and the count down date
         var distance = countDownDate - now;
-
         // Time calculations for days, hours, minutes and seconds
         var days = Math.floor(distance / (1000 * 60 * 60 * 24));
         var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -72,13 +95,14 @@
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
         // Display the result in the element with id="demo"
-        document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+        document.getElementById("timer").innerHTML = days + "d " + hours + "h "
         + minutes + "m " + seconds + "s" +  '...';
 
         // If the count down is finished, write some text 
         if (distance < 0) {
             clearInterval(x);
-            document.getElementById("demo").innerHTML = "EXPIRED";
+            $('#timer').remove(); // remove timer after it expires
+            $("#welcome").show();
         }
         }, 1000);
     </script>
