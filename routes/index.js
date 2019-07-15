@@ -7,4 +7,19 @@ router.get('/', function(req, res, next) {
   res.render('landing-page', { endDate: endDatetime });
 });
 
+/* GET home page. */
+router.get('/home', function(req, res, next) {
+  res.render('index', {});
+});
+
+/* GET shows page. */
+router.get('/shows', function(req, res, next) {
+  res.render('shows');
+});
+
+/* GET contact page. */
+router.get('/contact', function(req, res, next) {
+  res.render('contact');
+});
+
 module.exports = router;
