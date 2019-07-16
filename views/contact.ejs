@@ -12,6 +12,11 @@
   <h2 class="text-center">Contact</h2>
   <br>
   <!-- <p class="text-center"><em>Hit us up.</em></p> -->
+    <!-- <% if(commentSaved) { %> 
+         <div  id='banner' class="alert alert-success">
+                <strong>Success!</strong> Your message was received!
+            </div> 
+     <%}; %> -->
 
   <div class="row">
     <div class="col-md-4">
@@ -21,7 +26,7 @@
       <p><span class="glyphicon glyphicon-envelope"></span> theserlingsband@gmail.com</p>
     </div>
     <div class="col-md-8">
-        <form id='contactForm'>
+        <form id='contactForm' action='/contact' method='POST'>
             <div class="row">
                 <div class="col-sm-6 form-group">
                 <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
@@ -30,7 +35,7 @@
                 <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
                 </div>
             </div>
-            <textarea required class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+            <textarea required class="form-control" id="message" name="message" placeholder="Comment" rows="5"></textarea>
             <br>
             <div class="row">
                 <div class="col-md-12 form-group">
@@ -40,9 +45,8 @@
         </form>
     </div>
   </div>
-  <br>
 
-    <div class='row text-center pt'>
+    <div class='row text-center '>
         <a class='like-a-punk' href='https://www.instagram.com/theserlingsband/' target='_blank'>
             <i class="fab fa-instagram fa-3x"></i>
         </a>
@@ -60,7 +64,7 @@
 
     <!-- Main javascript -->
     <%- include('./partials/_script') %>
-    <script>
+    <!-- <script>
         
         $(document).ready(function(){
             $('#contactForm').submit((e)=>{
@@ -74,7 +78,7 @@
                     date: new Date()
                 };
                 const callback = (data)=>{
-                    debugger;
+                    $('#banner').
                 };
 
                 $.post(url, data, callback);
@@ -82,7 +86,7 @@
         });
 
 
-    </script>
+    </script> -->
 
 </body>
 </html>
