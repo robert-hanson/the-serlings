@@ -17,4 +17,10 @@ router.get('/shows', function(req, res, next) {
   res.render('shows');
 });
 
+/* GET shows page. */
+router.get('/band', function(req, res, next) {
+  res.render('band');
+});
+
+
 module.exports = router;

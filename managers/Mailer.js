@@ -12,7 +12,8 @@ var transporter = nodemailer.createTransport({
    });
 
 
-exports.sendEmail = (from, subject, body)=>{
+exports.sendEmail = (from, body)=>{
+    console.log('from: '+ from );
     const mailOptions = {
         from: from, // sender address
         to: 'theserlingsband@gmail.com', // list of receivers

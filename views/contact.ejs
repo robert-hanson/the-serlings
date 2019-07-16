@@ -2,7 +2,7 @@
 <html lang="en">
 <!-- Header info -->
 <%- include('./partials/_head', {title: 'The Serlings - Contact'}) %>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+<body id="myPage" class='bg-1' data-spy="scroll" data-target=".navbar" data-offset="50">
   <!-- Navigation bar -->
   <%- include('./partials/_nav', {active: 'CONTACT'}) %>
 
@@ -21,26 +21,28 @@
       <p><span class="glyphicon glyphicon-envelope"></span> theserlingsband@gmail.com</p>
     </div>
     <div class="col-md-8">
-      <div class="row">
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-        </div>
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-        </div>
-      </div>
-      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
-      <br>
-      <div class="row">
-        <div class="col-md-12 form-group">
-          <button class="btn pull-right" type="submit">Send</button>
-        </div>
-      </div>
+        <form id='contactForm'>
+            <div class="row">
+                <div class="col-sm-6 form-group">
+                <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                </div>
+                <div class="col-sm-6 form-group">
+                <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                </div>
+            </div>
+            <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+            <br>
+            <div class="row">
+                <div class="col-md-12 form-group">
+                <button class="btn pull-right" type="submit" >Send</button>
+                </div>
+            </div>
+        </form>
     </div>
   </div>
   <br>
 
-    <div class='row text-center content-div'>
+    <div class='row text-center pt'>
         <a class='like-a-punk' href='https://www.instagram.com/theserlingsband/' target='_blank'>
             <i class="fab fa-instagram fa-3x"></i>
         </a>
@@ -58,7 +60,29 @@
 
     <!-- Main javascript -->
     <%- include('./partials/_script') %>
+    <script>
+        
+        $(document).ready(function(){
+            $('#contactForm').submit((e)=>{
+                e.preventDefault();
+                alert($('#comments').val());
 
+                const url ='/contact'
+                const data = {
+                    message: $('#comments').val(),
+                    from: $('#name').val()
+                };
+                const callback = (data)=>{
+                    debugger;
+                    alert('you sent ' + $('#comments').val() + ' from ' + $('#name').val());
+                };
+
+                $.post(url, data, callback);
+            });
+        });
+
+
+    </script>
 
 </body>
 </html>

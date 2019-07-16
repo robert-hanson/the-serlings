@@ -1,4 +1,5 @@
 require('dotenv').config(); // add configure environment variables
+const config = require('./config');
 
 var createError = require('http-errors');
 var express = require('express');
@@ -10,6 +11,13 @@ var indexRouter = require('./routes/index');
 var contactRouter = require('./routes/contact');
 
 var app = express();
+
+//Set up mongoose connection
+// var mongoose = require('mongoose');
+var mongoDB = config.DB_CONNECTION;
+// mongoose.connect(mongoDB, {useNewUrlParser: true});
+// var db = mongoose.connection;
+// db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

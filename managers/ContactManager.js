@@ -1,8 +1,7 @@
 const Mailer = require('./Mailer');
 
-exports.sendMailTest = (from , subject, message)=>{
-    console.log('did we get here?');
+exports.sendMailTest = (from, message)=>{
     // create email body 
     const body = `<p>${message}</p>`;
-    Mailer.sendEmail(from , subject, body);
+    Mailer.sendEmail(from, message);
 };

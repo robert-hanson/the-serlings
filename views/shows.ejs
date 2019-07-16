@@ -2,15 +2,15 @@
 <html lang="en">
 <!-- Header info -->
 <%- include('./partials/_head', {title: 'The Serlings - Shows'}) %>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+<body id="myPage" class='bg-1' data-spy="scroll" data-target=".navbar" data-offset="50">
   <!-- Navigation bar -->
   <%- include('./partials/_nav', {active: 'SHOWS'}) %>
 
 
 <!-- Container (TOUR Section) -->
-<div id="tour" class="bg-1 ">
+<div id="tour" class="">
     <div class="container content-div">
-        <h3 class="text-center">UPCOMING SHOWS</h3>
+        <h2 class="text-center">UPCOMING SHOWS</h2>
         <p class="text-center">Come see the greatest show on dirt.
             <!-- <br> Remember to book your tickets! -->
         </p>
@@ -19,24 +19,27 @@
             <li class="list-group-item">October <span class="label label-danger">Sold Out!</span></li> 
             <li class="list-group-item">November <span class="badge">3</span></li> 
         </ul> -->
-        
+        <br>
         <div class="row text-center">
-        <div class="col-sm-6">
-            <div class="thumbnail">
-            <img src="paris.jpg" alt="Paris" width="400" height="300">
+        <div class="col-sm-offset-1 col-sm-4 show-image br-25">
+            <div class="thumbnail br-25">
+            <img src="./images/mcl2018.jpg" alt="Paris" width="400" height="300">
             <p><strong>Mummy Cat Lounge</strong></p>
-            <p>Friday 19 July 2018</p>
-            <button class="btn" data-toggle="modal" data-target="#myModal">Buy Tickets</button>
+            <p><em>Friday 19 July 2018</em></p>
+            <button class="btn">RSVP</button>
+            <!-- <button class="btn" data-toggle="modal" data-target="#myModal">Buy Tickets</button> -->
             </div>
         </div>
-        <div class="col-sm-6">
-            <div class="thumbnail">
-            <img src="newyork.jpg" alt="New York" width="400" height="300">
-            <p><strong>Mummy Cat Lounge</strong></p>
-            <p>Friday 19 July 2018</p>
-            <button class="btn" data-toggle="modal" data-target="#myModal">Buy Tickets</button>
+        <div class="col-sm-offset-2 col-sm-4 show-image br-25">
+            <div class="thumbnail br-25">
+            <img src="./images/MikeFrightNight2.jpg" alt="New York" width="400" height="300">
+            <p><b>Mummy Cat Lounge</b></p>
+            <p><em>Friday 19 July 2018</em></p>
+            <button class="btn">RSVP</button>
+            <!-- <button class="btn" data-toggle="modal" data-target="#myModal">Buy Tickets</button> -->
             </div>
         </div>
+
         <!-- <div class="col-sm-4">
             <div class="thumbnail">
             <img src="sanfran.jpg" alt="San Francisco" width="400" height="300">

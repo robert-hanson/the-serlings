@@ -10,10 +10,54 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/d5fe41cbdd.js"></script>
     <style>
-    body {
-      font: 400 15px/1.8 Lato, sans-serif;
-      color: #777;
+
+html, body {
+        height: 100%;
     }
+    body {
+      /* font: 400 15px/1.8 Lato, sans-serif; */
+      color: #777;
+      background: #2d2d30; 
+    }
+    .show-image{
+      /* border: 1px solid #2d2d30; */
+      border: 1px solid #777;
+    }
+
+    .br-25 {
+      border-radius: 25px;
+    }
+
+
+    .bg {
+        /* The image used */
+        background-image: url("./images/WhatTheLightBringsCover_sinTitle.jpg");
+
+        /* Full height */
+        height: 100%; 
+
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    img.grayed {
+        -webkit-filter: grayscale(25%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(25%);
+    }
+    .creep_green{
+        color: #1aff8c
+    }
+
+    .blippo{
+        font-family: 'Chalkduster'
+    }
+
+    .timer {
+        font-family: '"Arial Black", Gadget, sans-serif'
+    }
+
     /* h3, h4 {
       margin: 10px 0 30px 0;
       letter-spacing: 10px;      
@@ -23,8 +67,12 @@
     /* .container {
       padding: 80px 120px;
     } */
+    .pt {
+      padding-top: 80px;
+    }
     .content-div {
       padding-top: 80px;
+      height: 100%;
     }
     .person {
       border: 10px solid transparent;
@@ -50,7 +98,15 @@
         display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
       }
     }
+    .bg-black {
+      background: black; 
+      color: #bdbdbd;
+    }
+    .bg-white {
+      background: white;
+    }
     .bg-1 {
+      /* background: black; */
       background: #2d2d30;
       color: #bdbdbd;
     }
@@ -68,6 +124,7 @@
       padding: 0 0 15px 0;
       border: none;
       border-radius: 0;
+      margin-top: 20px;
     }
     .thumbnail p {
       margin-top: 15px;
