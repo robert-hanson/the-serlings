@@ -34,7 +34,7 @@
             <br>
             <div class="row">
                 <div class="col-md-12 form-group">
-                <button class="btn pull-right" type="submit" >Send</button>
+                <button class="btn btn-black pull-right" type="submit" >Send</button>
                 </div>
             </div>
         </form>
@@ -70,7 +70,9 @@
                 const url ='/contact'
                 const data = {
                     message: $('#comments').val(),
-                    from: $('#name').val()
+                    name: $('#name').val(),
+                    email: $('#email').val(),
+                    date: Date.now
                 };
                 const callback = (data)=>{
                     debugger;
