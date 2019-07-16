@@ -42,9 +42,18 @@ html, body {
         background-size: cover;
     }
 
+    .faded {
+        -webkit-filter: grayscale(45%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(45%);
+        opacity: 0.9;
+        filter: alpha(opacity=90); /* For IE8 and earlier */
+    }
+
     img.grayed {
-        -webkit-filter: grayscale(25%); /* Safari 6.0 - 9.0 */
-        filter: grayscale(25%);
+        -webkit-filter: grayscale(45%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(45%);
+        opacity: 0.9;
+        filter: alpha(opacity=90); /* For IE8 and earlier */
     }
     .creep_green{
         color: #1aff8c

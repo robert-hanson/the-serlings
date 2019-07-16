@@ -9,7 +9,8 @@ router.get('/', function(req, res, next) {
 });
 
 // POST sent comment
-router.post('/', function(req, res){
+router.post('/', async(req, res)=>{
+    console.log(JSON.stringify(req.body.date));
     try {
         const name = req.body.name;
         const email = req.body.email;

@@ -12,9 +12,9 @@ var transporter = nodemailer.createTransport({
    });
 
 
-exports.emailNotification = (body)=>{
+exports.sendContactMessageEmail = (body)=>{
     const mailOptions = {
-        // from: from, // sender address
+        from: '', // sender address
         to: 'theserlingsband@gmail.com', // list of receivers
         subject: 'NOTIFICATION - MESSAGE FROM WEBSITE', // Subject line
         html: body // plain text body

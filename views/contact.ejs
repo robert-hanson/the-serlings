@@ -30,7 +30,7 @@
                 <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
                 </div>
             </div>
-            <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+            <textarea required class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
             <br>
             <div class="row">
                 <div class="col-md-12 form-group">
@@ -65,18 +65,16 @@
         $(document).ready(function(){
             $('#contactForm').submit((e)=>{
                 e.preventDefault();
-                alert($('#comments').val());
 
                 const url ='/contact'
                 const data = {
                     message: $('#comments').val(),
                     name: $('#name').val(),
                     email: $('#email').val(),
-                    date: Date.now
+                    date: new Date()
                 };
                 const callback = (data)=>{
                     debugger;
-                    alert('you sent ' + $('#comments').val() + ' from ' + $('#name').val());
                 };
 
                 $.post(url, data, callback);
