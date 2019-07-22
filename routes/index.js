@@ -12,10 +12,7 @@ router.get('/home', function(req, res, next) {
   res.render('index', {});
 });
 
-/* GET shows page. */
-router.get('/shows', function(req, res, next) {
-  res.render('shows');
-});
+
 
 /* GET shows page. */
 router.get('/band', function(req, res, next) {
