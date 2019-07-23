@@ -1,0 +1,24 @@
+<div class='table-responsive'>
+    <table class='table table-condensed'>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Venue</th>
+                <th>Location</th>
+                <th><!--ticket link spot--></th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(let i=0; i < shows.length ; i++) { %>
+                <tr>
+                    <td><%= shows[i].date_formatted %></td>
+                    <td><%= shows[i].venue %></td>
+                    <td><%= `${shows[i].location.city}, ${shows[i].location.state}` %></td>
+                    <td>
+                        <a href='<%= shows[i].url %>' class='btn btn-black btn-sm' target='_blank'>RSVP</a>
+                    </td>
+                </tr>
+            <% } %> 
+        </tbody>
+    </table>
+</div>

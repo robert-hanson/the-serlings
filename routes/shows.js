@@ -3,8 +3,13 @@ var router = express.Router();
 const ShowsManager = require('../managers/ShowsManager');
 
 /* GET shows page. */
-router.get('/shows', function(req, res, next) {
-    res.render('shows');
+router.get('/', async(req, res, next) =>{
+    try {
+        const shows = await ShowsManager.getUpcomingShowsAsync();
+        res.render('shows', {shows: shows});
+    } catch (ex){
+        return console.error('Something went wrong: ' + JSON.stringify(ex));
+    }
   });
 
 /* GET contact page. */

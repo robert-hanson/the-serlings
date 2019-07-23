@@ -1,3 +1,4 @@
+const { format } = require('date-fns');
 var mongoose = require('mongoose');
 
 //Define a schema 
@@ -13,6 +14,10 @@ var ShowsSchema = new Schema({
     },
     url: String,
     admission: String // type of admissiong i.e. "free", "ticketed", "invite only"
+});
+
+ShowsSchema.virtual('date_formatted').get(function(){
+    return format(this.date, 'MMMM D, YYYY');
 });
 
 // Compile model from schema
