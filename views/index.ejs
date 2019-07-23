@@ -1,11 +1,6 @@
-<!DOCTYPE>
-<html lang="en">
-<!-- Header info -->
-<%- include('./partials/_head', {title: 'The Serlings'}) %>
-  <body id="myPage"  data-spy="scroll" data-target=".navbar" data-offset="50">
-    <!-- Navigation bar -->
-    <%- include('./partials/_nav', {active: 'HOME'}) %>
 
+<!-- Header info -->
+<%- include('./partials/_header', {title: 'The Serlings', active: 'HOME'}) %>
 
     <div class='bg pt container-fluid'>
         <!-- Display the countdown timer in an element -->
@@ -32,7 +27,4 @@
 
 
     <!-- Main javascript -->
-    <%- include('./partials/_script') %>
-
-  </body>
-</html>
+    <%- include('./partials/_footer') %>

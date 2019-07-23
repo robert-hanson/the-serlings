@@ -1,10 +1,6 @@
-<!DOCTYPE>
-<html lang="en">
-<!-- Header info -->
-<%- include('./partials/_head', {title: 'The Serlings - Band'}) %>
-  <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
-    <!-- Navigation bar -->
-    <%- include('./partials/_nav', {active: 'BAND'}) %>
+
+<!-- Header  -->
+<%- include('./partials/_header', {title: 'The Serlings - Band', active: 'BAND'}) %>
 
 
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -147,8 +143,4 @@
     </footer> -->
 
     <!-- Main javascript -->
-    <%- include('./partials/_script') %>
-
-
-  </body>
-</html>
+    <%- include('./partials/_footer') %>

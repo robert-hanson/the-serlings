@@ -1,11 +1,5 @@
-<!DOCTYPE>
-<html lang="en">
-<!-- Header info -->
-<%- include('./partials/_head', {title: 'The Serlings - Shows'}) %>
-<body id="myPage" class='bg-1' data-spy="scroll" data-target=".navbar" data-offset="50">
-  <!-- Navigation bar -->
-  <%- include('./partials/_nav', {active: 'SHOWS'}) %>
-
+<!-- Header -->
+<%- include('./partials/_header', {title: 'The Serlings - Shows', active: 'SHOWS'}) %>
 
 <!-- Container (TOUR Section) -->
 <div id="tour" class="">
@@ -68,8 +62,5 @@
 
 
     <!-- Main javascript -->
-    <%- include('./partials/_script') %>
+    <%- include('./partials/_footer') %>
 
-
-</body>
-</html>

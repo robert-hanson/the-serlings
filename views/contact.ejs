@@ -1,22 +1,11 @@
-<!DOCTYPE>
-<html lang="en">
-<!-- Header info -->
-<%- include('./partials/_head', {title: 'The Serlings - Contact'}) %>
-<body id="myPage" class='bg-1' data-spy="scroll" data-target=".navbar" data-offset="50">
-  <!-- Navigation bar -->
-  <%- include('./partials/_nav', {active: 'CONTACT'}) %>
+<!-- Header  -->
+<%- include('./partials/_header', {title: 'The Serlings - Contact', active: 'CONTACT'}) %>
 
 
 <!-- Container (Contact Section) -->
 <div id="contact" class="container content-div">
   <h2 class="text-center BilkFang">Contact</h2>
   <br>
-  <!-- <p class="text-center"><em>Hit us up.</em></p> -->
-    <!-- <% if(commentSaved) { %> 
-         <div  id='banner' class="alert alert-success">
-                <strong>Success!</strong> Your message was received!
-            </div> 
-     <%}; %> -->
 
   <div class="row">
     <div class="col-md-4">
@@ -63,30 +52,4 @@
     </div>
 
     <!-- Main javascript -->
-    <%- include('./partials/_script') %>
-    <!-- <script>
-        
-        $(document).ready(function(){
-            $('#contactForm').submit((e)=>{
-                e.preventDefault();
-
-                const url ='/contact'
-                const data = {
-                    message: $('#comments').val(),
-                    name: $('#name').val(),
-                    email: $('#email').val(),
-                    date: new Date()
-                };
-                const callback = (data)=>{
-                    $('#banner').
-                };
-
-                $.post(url, data, callback);
-            });
-        });
-
-
-    </script> -->
-
-</body>
-</html>
+    <%- include('./partials/_footer') %>
