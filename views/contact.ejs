@@ -1,55 +1,118 @@
 <!-- Header  -->
-<%- include('./partials/_header', {title: 'The Serlings - Contact', active: 'CONTACT'}) %>
+<%- include('./partials/_header', {title: 'The Serlings - Contact', active: 'CONTACT', bootstrap_version: bootstrap_version}) %>
 
 
-<!-- Container (Contact Section) -->
-<div id="contact" class="container content-div">
-  <h2 class="text-center BilkFang">Contact</h2>
-  <br>
-
-  <div class="row">
-    <div class="col-md-4">
-      <p>Fan? Drop a note.</p>
-      <p><span class="glyphicon glyphicon-map-marker"></span> Nashville</p>
-      <!-- <p><span class="glyphicon glyphicon-phone"></span>Phone: +00 1515151515</p> -->
-      <p><span class="glyphicon glyphicon-envelope"></span> theserlingsband@gmail.com</p>
-    </div>
-    <div class="col-md-8">
-        <form id='contactForm' action='/contact' method='POST'>
-            <div class="row">
-                <div class="col-sm-6 form-group">
-                <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-                </div>
-                <div class="col-sm-6 form-group">
-                <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-                </div>
-            </div>
-            <textarea required class="form-control" id="message" name="message" placeholder="Comment" rows="5"></textarea>
+<% if ( bootstrap_version === 4) { %>
+        <!-- Container (Contact Section) -->
+        <div id="contact" class="container content-div">
+            <h2 class="text-center BilkFang">Contact</h2>
             <br>
+            
             <div class="row">
-                <div class="col-md-12 form-group">
-                <button class="btn btn-black pull-right shadow" type="submit" >Send</button>
+                <div class="col-md-4">
+                    <p>Fan? Drop a note.</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Nashville</p>
+                    <!-- <p><span class="glyphicon glyphicon-map-marker"></span> Nashville</p> -->
+                    <!-- <p><span class="glyphicon glyphicon-phone"></span>Phone: +00 1515151515</p> -->
+                    <p><i class="fa fa-envelope"></i> theserlingsband@gmail.com</p>
+                </div>
+                <div class="col-md-8">
+                    <form id='contactForm' action='/contact' method='POST'>
+                        <div class="row">
+                            <div class="col-sm-6 form-group">
+                                <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                            </div>
+                            <div class="col-sm-6 form-group">
+                                <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                            </div>
+                        </div>
+                        <textarea required class="form-control" id="message" name="message" placeholder="Comment" rows="5"></textarea>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-12 form-group">
+                                <button class="btn btn-black float-right shadow" type="submit" >Send</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
-        </form>
-    </div>
-  </div>
+            
+                <div class='row justify-content-center'>
+                    <a class='like-a-punk mx-1' href='https://www.instagram.com/theserlingsband/' target='_blank'>
+                        <i class="fab fa-instagram fa-3x"></i>
+                    </a>
+                    <a class='like-a-punk mx-1' href='https://twitter.com/theserlingsband' target='_blank'>
+                        <i class="fab fa-twitter fa-3x"></i>
+                    </a>
+                    <a class='like-a-punk mx-1' href='https://www.youtube.com/channel/UCbuDz2kSMCLDup-UH5zlzeQ' target='_blank'>
+                        <i class="fab fa-youtube fa-3x"></i>
+                    </a>
+                    <a class='like-a-punk mx-1' href='https://www.facebook.com/theserlingsband/' target='_blank'>
+                        <i class="fab fa-facebook fa-3x"></i>
+                    </a>
+                    
+                </div>
+        </div>
 
-    <div class='row text-center '>
-        <a class='like-a-punk' href='https://www.instagram.com/theserlingsband/' target='_blank'>
-            <i class="fab fa-instagram fa-3x"></i>
-        </a>
-        <a class='like-a-punk' href='https://twitter.com/theserlingsband' target='_blank'>
-            <i class="fab fa-twitter fa-3x"></i>
-        </a>
-        <a class='like-a-punk' href='https://www.youtube.com/channel/UCbuDz2kSMCLDup-UH5zlzeQ' target='_blank'>
-            <i class="fab fa-youtube fa-3x"></i>
-        </a>
-        <a class='like-a-punk' href='https://www.facebook.com/theserlingsband/' target='_blank'>
-            <i class="fab fa-facebook fa-3x"></i>
-        </a>
-        
+<% } else { %>
+
+    <!-- Container (Contact Section) -->
+    <div id="contact" class="container content-div">
+        <h2 class="text-center BilkFang">Contact</h2>
+        <br>
+      
+        <div class="row">
+            <div class="col-md-4">
+                <p>Fan? Drop a note.</p>
+                <p><span class="glyphicon glyphicon-map-marker"></span> Nashville</p>
+                <!-- <p><span class="glyphicon glyphicon-phone"></span>Phone: +00 1515151515</p> -->
+                <p><span class="glyphicon glyphicon-envelope"></span> theserlingsband@gmail.com</p>
+            </div>
+            <div class="col-md-8">
+                <form id='contactForm' action='/contact' method='POST'>
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
+                            <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                        </div>
+                    </div>
+                    <textarea required class="form-control" id="message" name="message" placeholder="Comment" rows="5"></textarea>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-12 form-group">
+                            <button class="btn btn-black pull-right shadow" type="submit" >Send</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+      
+          <div class='row text-center '>
+              <a class='like-a-punk' href='https://www.instagram.com/theserlingsband/' target='_blank'>
+                  <i class="fab fa-instagram fa-3x"></i>
+              </a>
+              <a class='like-a-punk' href='https://twitter.com/theserlingsband' target='_blank'>
+                  <i class="fab fa-twitter fa-3x"></i>
+              </a>
+              <a class='like-a-punk' href='https://www.youtube.com/channel/UCbuDz2kSMCLDup-UH5zlzeQ' target='_blank'>
+                  <i class="fab fa-youtube fa-3x"></i>
+              </a>
+              <a class='like-a-punk' href='https://www.facebook.com/theserlingsband/' target='_blank'>
+                  <i class="fab fa-facebook fa-3x"></i>
+              </a>
+              
+          </div>
     </div>
+<% } %>
+
+
+
+
+
+
+
 
     <!-- Main javascript -->
     <%- include('./partials/_footer') %>

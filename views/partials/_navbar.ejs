@@ -1,4 +1,36 @@
-<nav class="navbar navbar-default navbar-fixed-top">
+  <% if ( bootstrap_version === 4) { %>
+
+    <nav class="navbar navbar-expand-sm navbar-dark fixed-top ">
+        <!-- Brand -->
+        <a class="navbar-brand BilkFang" href="/home">The Serlings</a>
+      
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item <%= active ==='HOME'? 'active' : ''%>">
+              <a class="nav-link" href="/home">HOME</a>
+            </li>
+            <li class="nav-item <%= active ==='SHOWS'? 'active' : ''%>">
+              <a class="nav-link" href="/shows">SHOWS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">VIDEOS</a>
+            </li> 
+            <li class="nav-item <%= active ==='CONTACT'? 'active' : ''%>">
+                <a class="nav-link" href="/contact">CONTACT</a>
+            </li> 
+          </ul>
+        </div> 
+      </nav>
+
+<% } else { %>
+
+  <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -29,3 +61,4 @@
       </div>
     </div>
   </nav>
+<% } %>
