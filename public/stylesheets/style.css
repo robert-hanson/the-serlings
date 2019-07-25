@@ -54,9 +54,9 @@ img.grayed {
   font-family: '"Arial Black", Gadget, sans-serif'
 }
 
-.pt {
+/* .pt {
   padding-top: 80px;
-}
+} */
 .content-div {
   padding-top: 80px;
   height: 100%;
@@ -100,11 +100,25 @@ table.shows-table > tbody > tr > td {
     font-size: .55em;
   }
 
+  .blippo {
+    font-size: 1.5rem;
+  }
   .rsvp-link {
     font-size: .75em;
     line-height: normal;
   }
+
+  .single-info {
+    padding-top: 0px;
+    padding-right: 0px;
+  }
 }
+
+.single-info {
+  padding-top: 3rem;
+  padding-top: 5rem;
+}
+
 .bg-black {
   background: black; 
   color: #bdbdbd;

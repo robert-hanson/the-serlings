@@ -1,24 +1,25 @@
 
 <!-- Header info -->
-<%- include('./partials/_header', {title: 'The Serlings', active: 'HOME'}) %>
+<%- include('./partials/_header', {title: 'The Serlings', active: 'HOME', bootstrap_version: bootstrap_version}) %>
 
-    <div class='bg pt container-fluid'>
+    <div class='bg pt-5  container-fluid '>
         <!-- Display the countdown timer in an element -->
-        <div class='pt-4'>
+        <div class='pt-sm-5 pt-3 pr-md-5'>
             
-            <h2 id="timer" class='creep_green pl-4 timer'></h2>
-            <div class='text-right pr-4' id='welcome' >
-                <h2 class='text-white BilkFang' >"What the Light Brings"</h2>
-                <h2 class='text-white blippo' >OUT NOW!</h2>
+            <!-- <h2 id="timer" class='creep_green pl-4 timer'></h2> -->
+            <div class='text-right ' id='welcome' >
+                <!-- <h5 class='BilkFang'>The Serling's</h5> -->
+                <h2 class='BilkFang' >"What the Light Brings"</h2>
+                <h2 class='blippo' >OUT NOW!</h2>
                 <div class='pb-5'>
-                    <a href='https://open.spotify.com/artist/5lQaNyh0QEPGxEMpixEnnk?si=Ums9pUNrSkCwwC17FP2iqQ'>
-                        <i class="fab fa-spotify fa-5x"></i>
+                    <a class='like-a-punk' href='https://open.spotify.com/artist/5lQaNyh0QEPGxEMpixEnnk?si=Ums9pUNrSkCwwC17FP2iqQ' target='_blank'>
+                        <i class="fab fa-spotify fa-3x"></i>
                     </a>
-                    <a href='https://music.apple.com/us/artist/the-serlings/1437004735'>
-                        <i class="fab fa-itunes fa-5x"></i>
+                    <a class='like-a-punk' href='https://music.apple.com/us/artist/the-serlings/1437004735' target='_blank'>
+                        <i class="fab fa-itunes fa-3x"></i>
                     </a>
-                    <a href='https://www.youtube.com/watch?v=pYB6_oEiSCg&feature=youtu.be'>
-                        <i class="fab fa-youtube fa-5x"></i>
+                    <a class='like-a-punk' href='https://www.youtube.com/watch?v=pYB6_oEiSCg&feature=youtu.be' target='_blank'>
+                        <i class="fab fa-youtube fa-3x"></i>
                     </a>
                 </div>
             </div>
