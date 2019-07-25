@@ -177,6 +177,8 @@ background: #212124;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
 }  
+
+/* needed for both */
 .navbar {
   font-family: Montserrat, sans-serif;
   margin-bottom: 0;
@@ -186,7 +188,9 @@ background: #212124;
   letter-spacing: 4px;
   opacity: 0.9;
 }
-.navbar li a, .navbar .navbar-brand { 
+
+/* just for bootstrap 3 */
+/* .navbar li a, .navbar .navbar-brand { 
   color: #d5d5d5 !important;
 }
 .navbar-nav li a:hover {
@@ -198,7 +202,12 @@ background: #212124;
 }
 .navbar-default .navbar-toggle {
   border-color: transparent;
-}
+} */
+/* just for bootstrap 3 */
+
+
+
+
 .open .dropdown-toggle {
   color: #fff;
   background-color: #555 !important;
@@ -209,6 +218,10 @@ background: #212124;
 .dropdown-menu li a:hover {
   background-color: red !important;
 }
+
+
+
+
 footer {
   background-color: #2d2d30;
   color: #f5f5f5;
