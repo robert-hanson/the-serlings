@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const ShowsManager = require('../managers/ShowsManager');
-const BOOSTRAP_VERSION = 3;
+const BOOSTRAP_VERSION = 4;
 
 
 /* GET shows page. */

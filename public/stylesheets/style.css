@@ -54,15 +54,6 @@ img.grayed {
   font-family: '"Arial Black", Gadget, sans-serif'
 }
 
-/* h3, h4 {
-margin: 10px 0 30px 0;
-letter-spacing: 10px;      
-font-size: 20px;
-color: #111;
-} */
-/* .container {
-padding: 80px 120px;
-} */
 .pt {
   padding-top: 80px;
 }
@@ -94,6 +85,26 @@ padding: 80px 120px;
     display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
   }
 }
+
+table.shows-table > thead > tr > th {
+  border-top: none; /* removes very top border from the table */
+}
+
+table.shows-table > tbody > tr > td {
+  vertical-align: middle;
+}
+
+
+@media (max-width: 480px) {
+  table  {
+    font-size: .55em;
+  }
+
+  .rsvp-link {
+    font-size: .75em;
+    line-height: normal;
+  }
+}
 .bg-black {
   background: black; 
   color: #bdbdbd;
@@ -112,9 +123,9 @@ background: #212124;
 }
 
 .bg-2 {
+  background: #ebebf1;
   /* background: black; */
   /* background: #0e0e0f; */
-  background: #ebebf1;
   /* color: #bdbdbd; */
 }
 
@@ -138,13 +149,10 @@ background: #212124;
   margin-top: 15px;
   color: #555;
 }
-.btn {
-  padding: 10px 20px;
-  background-color: #333;
-  color: #f1f1f1;
-  border-radius: 0;
-  transition: .2s;
-}
+
+
+
+
 
 .btn-black {
   padding: 10px 20px;
@@ -154,11 +162,22 @@ background: #212124;
   transition: .2s;
 }
 
+
 .btn:hover, .btn:focus {
   border: 1px solid #333;
   background-color: #fff;
   color: #000;
+} 
+
+
+.rsvp-link {
+  /* padding: 5px 20px; */
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
+
+
+
 .modal-header, h4, .close {
   background-color: #333;
   color: #fff !important;
@@ -188,25 +207,6 @@ background: #212124;
   letter-spacing: 4px;
   opacity: 0.9;
 }
-
-/* just for bootstrap 3 */
-/* .navbar li a, .navbar .navbar-brand { 
-  color: #d5d5d5 !important;
-}
-.navbar-nav li a:hover {
-  color: #fff !important;
-}
-.navbar-nav li.active a {
-  color: #fff !important;
-  background-color: #29292c !important;
-}
-.navbar-default .navbar-toggle {
-  border-color: transparent;
-} */
-/* just for bootstrap 3 */
-
-
-
 
 .open .dropdown-toggle {
   color: #fff;
@@ -276,4 +276,9 @@ a.like-a-punk:hover {
   border-color: #e7e7e7;
   border-top-width: 1px;
   border-top-style: solid;
+}
+
+
+.color-primary {
+  color: #bdbdbd;  
 }
