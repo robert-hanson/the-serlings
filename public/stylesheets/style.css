@@ -29,6 +29,19 @@ body {
   background-size: cover;
 }
 
+.bg-timh {
+  /* The image used */
+  background-image: url("../images/TrappedInMyHead.jpg");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .faded {
   -webkit-filter: grayscale(45%); /* Safari 6.0 - 9.0 */
   filter: grayscale(45%);
